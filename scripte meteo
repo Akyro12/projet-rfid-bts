@@ -1,0 +1,19 @@
+var ctx = document.getElementById('temperatureChart').getContext('2d');
+
+var temperatureChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['00h', '06h', '12h', '18h'],
+        datasets: [{
+            label: 'Température (°C)',
+            data: [12, 15, 20, 18],
+            borderColor: 'orange',
+            backgroundColor: 'rgba(0, 183, 255, 0.2)',
+            fill: true
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false
+    }
+});
