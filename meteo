@@ -1,0 +1,39 @@
+<?php
+$temperature = rand(10, 30);
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site météo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Météo du jour</h1>
+    </header>
+
+    <div class="container">
+
+        <img src="meteo_image.jpg" alt="Météo" class="weather-image">
+
+        <div class="card">
+            <h2>Température actuelle</h2>
+            <p><?php echo $temperature; ?> °C</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
